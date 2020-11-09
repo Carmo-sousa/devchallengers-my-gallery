@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #4e5150;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__avatar {
+  width: 156px;
+  height: 156px;
+  border-radius: 60px;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 9px;
+}
+
+.header__name {
+  font-size: 24px;
+}
+
+.header__country {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a9a9a9;
+}
+
+.header__info {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  width: 100px;
+  height: 67px;
+  margin: 12px;
+  border-radius: 16px;
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__title {
+  font-size: 18px;
+}
+
+.card__content {
+  font-size: 14px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  margin-top: 65px;
+  max-width: 965px;
+  width: 75%;
+  grid-template-areas:
+    "card-1 card-2 card-2"
+    "card-3 card-3 card-4"
+    "card-5 card-6 card-4";
+  transition: all 0.5s ease;
+}
+
+.gallery__item {
+  width: 100%;
+  height: 100%;
+  min-width: 33.33%;
+  min-height: 33.33%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gallery__item:nth-child(1) {
+  grid-area: card-1;
+}
+.gallery__item:nth-child(2) {
+  grid-area: card-2;
+}
+.gallery__item:nth-child(3) {
+  grid-area: card-3;
+}
+.gallery__item:nth-child(4) {
+  grid-area: card-4;
+}
+.gallery__item:nth-child(5) {
+  grid-area: card-5;
+}
+.gallery__item:nth-child(6) {
+  grid-area: card-6;
+}
+
+.gallery__item:nth-child(4) img {
+  /* border-radius: 40px; */
+  height: 105%;
+}
+
+/* Footer */
+.footer {
+  margin-top: 100px;
+}
+
+.copyright {
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    padding: 10px;
+  }
+  .gallery {
+    width: 100%;
+    gap: 5px;
+    padding: 0;
+    margin-top: 35px;
+  }
+
+  .header__avatar {
+    width: 101px;
+    height: 101px;
+    border-radius: 38px;
+  }
+
+  .header__name {
+    font-size: 14px;
+  }
+
+  .header__country {
+    font-size: 10px;
+  }
+
+  .card {
+    width: 78px;
+    height: 52px;
+    border-radius: 12px;
+  }
+
+  .card__title,
+  .card__content {
+    font-size: 12px;
+  }
+}
